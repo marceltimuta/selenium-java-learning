@@ -30,6 +30,10 @@ public class BaseTests {
         System.out.println("There are: " + elements.size() + " elements on the page");
     }
 
+    public void exerciseChapter4() {
+
+    }
+
     public void tearDown() {
         driver.quit();
     }
