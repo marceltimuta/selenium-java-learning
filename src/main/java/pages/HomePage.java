@@ -66,6 +66,21 @@ public class HomePage {
         return new DynamicLoadingPage(driver);
     }
 
+    public LargeAndDeepDomPage clickLargeAndDeepDomLink() {
+        clickLink("Large & Deep DOM");
+        return new LargeAndDeepDomPage(driver);
+    }
+
+    public InfiniteScrollPage clickInfiniteScrollLink() {
+        clickLink("Infinite Scroll");
+        return new InfiniteScrollPage(driver);
+    }
+
+    public DropDownListPage clickDropDownLink() {
+        clickLink("Dropdown");
+        return new DropDownListPage(driver);
+    }
+
     private void clickLink(String link) {
         driver.findElement(By.linkText(link)).click();
     }
