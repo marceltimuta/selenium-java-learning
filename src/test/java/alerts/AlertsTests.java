@@ -21,7 +21,7 @@ public class AlertsTests extends BaseTests {
         alertsPage.triggerConfirm();
         assertEquals(alertsPage.alertGetText(), "I am a JS Confirm");
         alertsPage.alertClickToDismiss();
-        assertEquals(alertsPage.getResultText(), "You clicked: Cancel");
+        assertEquals(alertsPage.getResultText(), "You clicked: Cancel!");
     }
 
     @Test

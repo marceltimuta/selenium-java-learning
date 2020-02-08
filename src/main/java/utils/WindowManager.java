@@ -1,6 +1,8 @@
 package utils;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WindowManager {
     private WebDriver driver;
@@ -46,7 +48,12 @@ public class WindowManager {
 
     public void switchToNewTab() {
         var windows = driver.getWindowHandles();
-        windows.forEach(driver.switchTo()::window);
+        System.out.println("Number of tabs: " + windows.size());
+        WebDriverWait wait = new WebDriverWait(driver, 5);
+        wait.until(ExpectedConditions.numberOfWindowsToBe(2));
 
+        for (String window : windows) {
+            driver.switchTo().window(window);
+        }
     }
 }

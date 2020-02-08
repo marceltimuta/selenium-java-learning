@@ -23,8 +23,9 @@ public class NavigationTests extends BaseTests {
     }
 
     @Test
-    void testIfPageIsOpenInNewTab() {
+    void testIfPageIsOpenInNewTab() throws InterruptedException {
         var newTab = homePage.clickOnDynamicLoading().openPageInNewTab();
+        Thread.sleep(5000);
         getWindowManager().switchToNewTab();
 
         assertTrue(newTab.checkIfStartButtonIsDisplayed(), "Browser switched to wrong tab");
