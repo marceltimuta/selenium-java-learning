@@ -33,4 +33,8 @@ public class DynamicLinkExampleTwoPage {
         return driver.findElement(finishMessage).getText();
     }
 
+    public boolean checkIfStartButtonIsDisplayed() {
+        return driver.findElement(startButton).isDisplayed();
+    }
+
 }

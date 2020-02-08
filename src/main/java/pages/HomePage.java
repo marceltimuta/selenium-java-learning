@@ -81,6 +81,11 @@ public class HomePage {
         return new DropDownListPage(driver);
     }
 
+    public MultipleWindowsPage clickMultipleWindows() {
+        clickLink("Multiple Windows");
+        return new MultipleWindowsPage(driver);
+    }
+
     private void clickLink(String link) {
         driver.findElement(By.linkText(link)).click();
     }

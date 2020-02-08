@@ -5,6 +5,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
+import utils.WindowManager;
 
 
 public class BaseTests {
@@ -23,5 +24,9 @@ public class BaseTests {
     @AfterMethod
     public void tearDown() {
         driver.quit();
+    }
+
+    public WindowManager getWindowManager() {
+        return new WindowManager(driver);
     }
 }
