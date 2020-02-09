@@ -30,6 +30,6 @@ public class AlertsTests extends BaseTests {
         alertsPage.triggerPrompt();
         alertsPage.alertSetInput("I am the best automator");
         alertsPage.alertClickToAccept();
-        assertEquals(alertsPage.getResultText(), "You entered: I am the best automator");
+        assertEquals(alertsPage.getResultText(), "You entered: I am the beeeeest automator");
     }
 }
